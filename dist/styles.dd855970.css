@@ -22,11 +22,34 @@ h3 {
   width: 150px;
 }
 
-.grids {
+.container {
+  margin: 0 auto;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.grid-lg {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 2fr 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+.grid-sm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5px;
+  grid-column-gap: 5px;
+}
+
+@media (max-width: 800px) {
+  .grid-lg,
+  .grid-sm {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
 }
 
 
